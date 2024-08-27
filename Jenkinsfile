@@ -40,7 +40,7 @@ pipeline {
             steps {
                 // Ici vous pouvez ajouter une étape pour déployer l'application dans un environnement
                 // comme Kubernetes, AWS ECS, ou même un serveur en production.
-                echo 'Déploiement sur le serveur non configuré hello'
+                echo 'Déploiement sur le serveur non configuré'
             }
         }
     }
