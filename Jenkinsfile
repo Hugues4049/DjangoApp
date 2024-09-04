@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        DOCKERHUB_CREDENTIALS = credentials('debe861c-53ab-4400-a9c6-3faba5330e82') // Remplacez par l'ID de vos credentials DockerHub
+        DOCKERHUB_CREDENTIALS = credentials('identifiants_dockerhub') // Remplacez par l'ID de vos credentials DockerHub
     }
 
     stages {
@@ -30,13 +30,13 @@ pipeline {
         stage('Push to DockerHub') {
             steps {
                 // Se connecter à DockerHub et pousser l'image
-                sh 'docker login -u hugues4049 -p TITOroland#4049'
+                sh 'docker login -u $MDOCKERHUB_CREDENTIALS_USR -p $DOCKERHUB_CREDENTIALS_PSW'
                 sh 'docker tag hugues4049/my_django_app hugues4049/my_django_app:latest'
                 sh 'docker push hugues4049/my_django_app:latest'
             }
         }
 
-        stage('Deploy to Server (optional)') {
+        stage('Deploy to Server') {
             steps {
                 // Ici vous pouvez ajouter une étape pour déployer l'application dans un environnement
                 // comme Kubernetes, AWS ECS, ou même un serveur en production.
