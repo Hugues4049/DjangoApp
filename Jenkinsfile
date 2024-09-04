@@ -30,7 +30,7 @@ pipeline {
         stage('Push to DockerHub') {
             steps {
                 // Se connecter à DockerHub et pousser l'image
-                sh 'docker login -u $MDOCKERHUB_CREDENTIALS_USR -p $DOCKERHUB_CREDENTIALS_PSW'
+                sh 'docker login -u $DOCKERHUB_CREDENTIALS_USR -p $DOCKERHUB_CREDENTIALS_PSW'
                 sh 'docker tag hugues4049/my_django_app hugues4049/my_django_app:latest'
                 sh 'docker push hugues4049/my_django_app:latest'
             }
