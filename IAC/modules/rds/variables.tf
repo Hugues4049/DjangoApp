@@ -42,3 +42,7 @@ variable "name" {
   description = "Name of the RDS instance"
   type        = string
 }
+
+variable "private_subnet_ids" {
+  type = list(string)
+}

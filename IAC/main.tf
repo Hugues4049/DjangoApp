@@ -31,7 +31,7 @@ module "subnets" {
   vpc_id               = module.vpc.vpc_id
   public_subnet_cidrs  = ["10.0.1.0/24", "10.0.2.0/24"]
   private_subnet_cidrs = ["10.0.3.0/24", "10.0.4.0/24"]
-  azs                  = ["us-west-1a", "us-west-1b"]
+  azs                  = ["eu-west-3a", "eu-west-3b"]
   name                 = "main-subnets"
 }
 
@@ -63,13 +63,14 @@ module "ecs_cluster" {
 module "rds" {
   source               = "./modules/rds"
   allocated_storage    = 20
-  instance_class       = "db.t2.micro"
+  instance_class       = "db.t3.micro"
   db_name              = "mydatabase"
-  username             = "admin"
+  username             = "roland_admin"
   password             = "yourpassword"
   security_group_id    = module.security_groups.rds_sg_id
   db_subnet_group_name = "main-subnet-group"
   subnet_ids           = module.subnets.private_subnet_ids
+  private_subnet_ids   = module.subnets.private_subnet_ids
   name                 = "postgres-instance"
 }
 
