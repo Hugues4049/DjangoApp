@@ -1,19 +1,19 @@
 variable "name" {
-  description = "Name of the ALB"
+  description = "Le nom de l'ALB"
   type        = string
 }
 
 variable "alb_sg_id" {
-  description = "Security group ID for ALB"
+  description = "L'ID du groupe de sécurité associé à l'ALB"
   type        = string
 }
 
 variable "subnet_ids" {
-  description = "List of subnet IDs for ALB"
+  description = "Liste des sous-réseaux où déployer l'ALB"
   type        = list(string)
 }
 
 variable "vpc_id" {
-  description = "ID of the VPC"
+  description = "L'ID du VPC pour l'ALB"
   type        = string
 }

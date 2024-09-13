@@ -20,6 +20,9 @@ resource "aws_db_instance" "postgres" {
   }
 }
 
+
+
+
 resource "aws_db_subnet_group" "main" {
   name        = "main-subnet-group"
   description = "Subnet group for RDS"

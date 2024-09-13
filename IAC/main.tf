@@ -22,9 +22,10 @@ provider "aws" {
 
 module "vpc" {
   source     = "./modules/vpc"
+  name       = var.name
   cidr_block = "10.0.0.0/16"
-  name       = "main-vpc"
 }
+
 
 module "subnets" {
   source               = "./modules/subnets"
@@ -35,11 +36,13 @@ module "subnets" {
   name                 = "main-subnets"
 }
 
+
 module "nat_gateway" {
   source           = "./modules/nat_gateway"
-  public_subnet_id = element(module.subnets.public_subnet_ids, 0)
+  public_subnet_id = module.subnets.public_subnet_ids[0]
   name             = "main"
 }
+
 
 module "security_groups" {
   source = "./modules/security_groups"
@@ -47,26 +50,52 @@ module "security_groups" {
   name   = "main"
 }
 
+
+
 module "alb" {
   source     = "./modules/alb"
   name       = "main-alb"
   alb_sg_id  = module.security_groups.alb_sg_id
   subnet_ids = module.subnets.public_subnet_ids
   vpc_id     = module.vpc.vpc_id
+
 }
+
+
+
 
 module "ecs_cluster" {
   source = "./modules/ecs_cluster"
-  name   = "main-cluster"
+
+  name                        = var.name
+  db_name                     = var.db_name
+  db_user                     = var.db_user
+  db_password                 = var.db_password
+  public_subnet_ids           = module.subnets.public_subnet_ids
+  ecs_security_group_id       = module.security_groups.ecs_sg_id
+  alb_target_group_arn        = module.alb.target_group_arn
+  ecs_task_execution_role_arn = aws_iam_role.ecs_task_execution_role.arn
+  rds_endpoint                = module.rds.endpoint
+
+  tags = {
+    Name = "${var.name}-ecs-cluster"
+  }
 }
+
+
+
+
+
+
+
 
 module "rds" {
   source               = "./modules/rds"
-  allocated_storage    = 20
-  instance_class       = "db.t3.micro"
-  db_name              = "mydatabase"
-  username             = "roland_admin"
-  password             = "yourpassword"
+  allocated_storage    = var.allocated_storage
+  instance_class       = var.instance_class
+  db_name              = var.db_name
+  username             = var.username
+  password             = var.password
   security_group_id    = module.security_groups.rds_sg_id
   db_subnet_group_name = "main-subnet-group"
   subnet_ids           = module.subnets.private_subnet_ids
@@ -74,3 +103,40 @@ module "rds" {
   name                 = "postgres-instance"
 }
 
+
+
+
+
+module "route53" {
+  source      = "./modules/route53"
+  domain_name = "roland_ebe.net" # Remplacez par votre nom de domaine
+  subdomain   = "www"
+
+  alb_dns_name = module.alb.dns_name
+  alb_zone_id  = module.alb.zone_id
+}
+
+
+
+
+resource "aws_iam_role" "ecs_task_execution_role" {
+  name = "ecsTaskExecutionRole"
+
+  assume_role_policy = jsonencode({
+    Version = "2012-10-17"
+    Statement = [
+      {
+        Effect = "Allow"
+        Principal = {
+          Service = "ecs-tasks.amazonaws.com"
+        }
+        Action = "sts:AssumeRole"
+      }
+    ]
+  })
+}
+
+resource "aws_iam_role_policy_attachment" "ecs_task_execution_policy" {
+  role       = aws_iam_role.ecs_task_execution_role.name
+  policy_arn = "arn:aws:iam::aws:policy/service-role/AmazonECSTaskExecutionRolePolicy"
+}
