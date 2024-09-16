@@ -22,12 +22,14 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'django-insecure-)3!+$==^1g1c4_ovw3ny(l#)7na_s1-3pn6$_&!-f-*elti5x)'
 
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+# Mode de débogage (désactiver en production)
+DEBUG = os.getenv('DEBUG', 'True') == 'True'
 
-ALLOWED_HOSTS = []
+# Configuration des hôtes autorisés
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
 
-# Applications
+
+# Applications installées
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -35,9 +37,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'mapage',  # Your app
+    'mapage',  # Votre application personnalisée
 ]
 
+# Middleware pour la gestion des requêtes HTTP
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -46,17 +49,17 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',  # Pour servir les fichiers statiques en production
 ]
 
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
-
+# Configuration de l'URL principale
 ROOT_URLCONF = 'my_django_app.urls'
 
+# Configuration des templates
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR / 'mapage/templates'],  # Make sure this path exists
+        'DIRS': [BASE_DIR / 'mapage/templates'],  # Répertoire des templates personnalisés
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -69,32 +72,50 @@ TEMPLATES = [
     },
 ]
 
+# Configuration de l'application WSGI
 WSGI_APPLICATION = 'my_django_app.wsgi.application'
 
-# Database settings
+# Configuration de la base de données
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql' if not DEBUG else 'django.db.backends.sqlite3',
-        'NAME': os.environ.get('DB_NAME', BASE_DIR / 'db.sqlite3'),
-        'USER': os.environ.get('DB_USER', ''),
-        'PASSWORD': os.environ.get('DB_PASSWORD', ''),
-        'HOST': os.environ.get('DB_HOST', ''),
-        'PORT': os.environ.get('DB_PORT', '5432'),
+        'NAME': os.getenv('DB_NAME', BASE_DIR / 'db.sqlite3'),
+        'USER': os.getenv('DB_USER', ''),
+        'PASSWORD': os.getenv('DB_PASSWORD', ''),
+        'HOST': os.getenv('DB_HOST', ''),
+        'PORT': os.getenv('DB_PORT', '5432'),
     }
 }
 
-# Static files settings
+# Gestion des fichiers statiques
 STATIC_URL = '/static/'
-STATICFILES_DIRS = [BASE_DIR / 'mapage/static']
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')  # For collectstatic
+STATICFILES_DIRS = [BASE_DIR / 'mapage/static']  # Répertoires des fichiers statiques dans l'app
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')  # Emplacement où collectstatic rassemble les fichiers
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
-# Media files
+# Gestion des fichiers média
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
-# Security settings
-CSRF_COOKIE_SECURE = True
-SESSION_COOKIE_SECURE = True
+# Paramètres de sécurité pour les cookies
+CSRF_COOKIE_SECURE = not DEBUG
+SESSION_COOKIE_SECURE = not DEBUG
 
-# Default auto field
+# Paramètre par défaut pour les modèles auto-générés
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# Configuration des logs (facultatif, utile pour le debug et les erreurs en production)
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'handlers': {
+        'console': {
+            'level': 'DEBUG',
+            'class': 'logging.StreamHandler',
+        },
+    },
+    'root': {
+        'handlers': ['console'],
+        'level': 'DEBUG' if DEBUG else 'WARNING',
+    },
+}

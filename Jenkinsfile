@@ -35,6 +35,13 @@ pipeline {
                 sh 'docker push hugues4049/my_django_app:latest'
             }
         }
+        stage('Terraform Apply') {
+            steps {
+                sh 'terraform init IAC/'
+                 sh 'terraform apply -auto-approve IAC/'
+             }
+        }
+
 
         stage('Deploy to Server') {
             steps {

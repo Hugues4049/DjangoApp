@@ -1,24 +1,26 @@
-# Utiliser une image de base légère avec Python
+# Use a lightweight Python image
 FROM python:3.10-slim
 
-# Définir le répertoire de travail
+# Set working directory
 WORKDIR /app
 
-# Installer les dépendances système si nécessaire
+# Install system dependencies
 RUN apt-get update && apt-get install -y build-essential libpq-dev && rm -rf /var/lib/apt/lists/*
 
-# Copier les fichiers de votre projet dans le conteneur
-COPY . .
-
-# Installer les dépendances Python à partir du fichier requirements.txt
+# Copy only the requirements first (for Docker caching efficiency)
 COPY requirements.txt .
+
+# Install Python dependencies
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Collecter les fichiers statiques de Django
+# Copy the rest of the application files
+COPY . .
+
+# Collect Django static files
 RUN python manage.py collectstatic --noinput
 
-# Exposer le port sur lequel l'application sera accessible
+# Expose the application port
 EXPOSE 8000
 
-# Commande pour démarrer le serveur Django avec Gunicorn
+# Run the Django application with Gunicorn
 CMD ["gunicorn", "--bind", "0.0.0.0:8000", "my_django_app.wsgi:application"]
