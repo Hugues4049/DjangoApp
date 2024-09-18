@@ -73,9 +73,14 @@ module "ecs_cluster" {
   db_password                 = var.db_password
   public_subnet_ids           = module.subnets.public_subnet_ids
   ecs_security_group_id       = module.security_groups.ecs_sg_id
-  alb_target_group_arn        = module.alb.target_group_arn
+  alb_target_group_arn        = module.alb.alb_target_group_arn
+  alb_listener_arn            = module.alb.alb_listener_arn
+  alb_listener                = module.alb.alb_listener_arn
+  alb_dns_name                = module.alb.alb_dns_name
+  alb_zone_id                 = module.alb.alb_zone_id
   ecs_task_execution_role_arn = aws_iam_role.ecs_task_execution_role.arn
   rds_endpoint                = module.rds.endpoint
+  security_group_id           = module.security_groups.ecs_sg_id
 
   tags = {
     Name = "${var.name}-ecs-cluster"
@@ -112,8 +117,8 @@ module "route53" {
   domain_name = "roland_ebe.net" # Remplacez par votre nom de domaine
   subdomain   = "www"
 
-  alb_dns_name = module.alb.dns_name
-  alb_zone_id  = module.alb.zone_id
+  alb_dns_name = module.alb.alb_dns_name
+  alb_zone_id  = module.alb.alb_zone_id
 }
 
 

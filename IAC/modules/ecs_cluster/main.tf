@@ -58,6 +58,7 @@ resource "aws_ecs_task_definition" "django_task" {
 
 
 
+
 resource "aws_ecs_service" "django_service" {
   name            = "my-django-service"
   cluster         = aws_ecs_cluster.ecs_cluster.id
@@ -72,14 +73,17 @@ resource "aws_ecs_service" "django_service" {
   }
 
   load_balancer {
-    target_group_arn = module.alb.target_group_arn
-    container_name   = "my_django_app"
-    container_port   = 8000
+    container_name = "my_django_app"
+    container_port = 8000
   }
 
-  depends_on = [aws_lb_listener.alb_listener]
+
+  depends_on = [var.alb_listener_arn]
+
 }
 
+
+#01810028 65 et 27 04
 resource "aws_iam_role" "ecs_task_execution_role" {
   name = "ecsTaskExecutionRole"
 
