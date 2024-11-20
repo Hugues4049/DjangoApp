@@ -89,7 +89,11 @@ module "ecs_cluster" {
 
 
 
-
+module "ecr" {
+  source           = "./modules/ecr"
+  project_name     = "DjangoAppDjangoApp"
+  repository_names = ["ecr_DjangoApp"]
+}
 
 
 

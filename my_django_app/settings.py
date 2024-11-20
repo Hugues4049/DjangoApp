@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.1/ref/settings/
 """
 
+
 from pathlib import Path
 import os
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -89,7 +90,7 @@ DATABASES = {
 
 # Gestion des fichiers statiques
 STATIC_URL = '/static/'
-STATICFILES_DIRS = [BASE_DIR / 'mapage/static']  # Répertoires des fichiers statiques dans l'app
+STATICFILES_DIRS = [BASE_DIR / 'static']  # Répertoires des fichiers statiques dans l'app
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')  # Emplacement où collectstatic rassemble les fichiers
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
