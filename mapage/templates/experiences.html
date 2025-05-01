@@ -1,0 +1,130 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Expériences</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Expériences Professionnelles</h1>
+        <nav>
+            <nav>
+
+                <ul>
+                    <li><a href="{% url 'index' %}">Accueil</a></li>
+                    <li><a href="{% url 'profil' %}">À propos de moi</a></li>
+                    <li><a href="{% url 'parcours_academique' %}">Parcours Académique</a></li>
+                    <li><a href="{% url 'experiences' %}">Expériences</a></li>
+                    <li><a href="{% url 'certifications' %}">Certifications</a></li>
+                    <li><a href="{% url 'projets' %}">Projets</a></li>
+                    <li><a href="{% url 'competences' %}">Compétences</a></li>
+                    <li><a href="{% url 'contact' %}">Contact</a></li>
+                </ul>
+            </nav>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Mes expériences</h2>
+            <p>Vous trouverez ici mes différentes expériences professionnelles.</p>
+        </section>
+        <!-- Section Expériences -->
+        <section id="experiences" class="section">
+            <div class="container">
+                <h2>Expériences</h2>
+                <div class="timeline">
+                    <!-- Enseignant vacataire -->
+                    <div class="timeline-item">
+                        <div class="timeline-icon">1</div>
+                        <div class="timeline-content">
+                            <h3>Enseignant vacataire - ESILV ELMV - CDD</h3>
+                            <span>Janvier 2024 - Auj.</span>
+                            <ul>
+                                <li>Manipulation d'outils avancés d'analyse, incluant l'intégrale de Lebesgue dans le
+                                    cadre
+                                    de
+                                    l'analyse de Fourier.</li>
+                                <li>Application de la transformation de Fourier pour l'étude et la résolution des
+                                    équations
+                                    différentielles ordinaires (EDO) et partielles (EDP).</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- DevOps Engineer -->
+                    <div class="timeline-item">
+                        <div class="timeline-icon">2</div>
+                        <div class="timeline-content">
+                            <h3>DevOps Engineer - NEERO - CDD</h3>
+                            <span>Mars 2023 - Decembre 2024</span>
+                            <ul>
+                                <li>Automatisation des processus et des déploiements dans le cloud AWS en utilisant les
+                                    outils
+                                    de CI/CD et Terraform pour l'Infrastructure as Code.</li>
+                                <li>Architecture, évolution et maintenance des systèmes liés aux applications.</li>
+                                <li>Automatisation des tâches récurrentes au sein de l'équipe.</li>
+                                <li>Amélioration des stacks techniques et participation à l'évolution du système de
+                                    déploiements.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Data Engineer -->
+                    <div class="timeline-item">
+                        <div class="timeline-icon">3</div>
+                        <div class="timeline-content">
+                            <h3>Data Engineer - DATAIDRAW - Stage</h3>
+                            <span>Avril 2023 - Septembre 2023</span>
+                            <ul>
+                                <li>Intégration des outils CI/CD dans le workflow pour automatiser la collecte de
+                                    données
+                                    par
+                                    web scraping.</li>
+                                <li>Développement de scripts Python pour l'extraction de données web et interaction avec
+                                    les
+                                    données stockées sur AWS.</li>
+                                <li>Gestion des données : fusion, nettoyage et formatage des bases de données.</li>
+                                <li>Automatisation des tâches à l'aide des outils CI/CD intégrés dans le processus de
+                                    développement.</li>
+                                <li>Création et maintenance de scripts conteneurisés pour le déploiement.</li>
+                                <li>Mise en place d'un système d'alertes via email et Slack.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Data Scientist -->
+                    <div class="timeline-item">
+                        <div class="timeline-icon">4</div>
+                        <div class="timeline-content">
+                            <h3>Data Scientist - Conseil Régional d'Île-de-France - Stage</h3>
+                            <span>Novembre 2021 - Mars 2022</span>
+                            <ul>
+                                <li>Analyse des données sur la fluctuation du trafic routier pendant la pandémie de
+                                    COVID-19.</li>
+                                <li>Analyse des données de l'application Waze pour comprendre les irrégularités de
+                                    trafic
+                                    dans certaines communes.</li>
+                                <li>Création de tableaux de bord de reporting avec Power BI.</li>
+                                <li>Utilisation d'algorithmes de Machine Learning (NLP) pour thématiser les jeux de
+                                    données.
+                                </li>
+                                <li>Utilisation de Postman pour envoyer des requêtes HTTP et extraire des données.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 Mon Portfolio</p>
+    </footer>
+</body>
+
+</html>

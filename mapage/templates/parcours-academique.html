@@ -1,0 +1,254 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Parcours Académique</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Parcours Académique</h1>
+        <nav>
+            <nav>
+
+                <ul>
+                    <li><a href="{% url 'index' %}">Accueil</a></li>
+                    <li><a href="{% url 'profil' %}">À propos de moi</a></li>
+                    <li><a href="{% url 'parcours_academique' %}">Parcours Académique</a></li>
+                    <li><a href="{% url 'experiences' %}">Expériences</a></li>
+                    <li><a href="{% url 'certifications' %}">Certifications</a></li>
+                    <li><a href="{% url 'projets' %}">Projets</a></li>
+                    <li><a href="{% url 'competences' %}">Compétences</a></li>
+                    <li><a href="{% url 'contact' %}">Contact</a></li>
+                </ul>
+            </nav>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Mes études</h2>
+            <p>Découvrez ici mon parcours scolaire et universitaire.</p>
+        </section>
+        <!-- Section Parcours Académique -->
+        <section id="parcours-academique" class="section">
+            <div class="container">
+                <h2>Parcours Académique</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-icon">1</div>
+                        <div class="timeline-content">
+                            <h3>Datascientest</h3>
+                            <span>(2024)</span>
+                            <p>Bootcamp DevOps - Administration des systèmes Linux</p>
+
+                            <p> Cette formation intensive m'a permis d'acquérir une expertise technique approfondie en
+                                DevOps et en administration de systèmes sous Linux. Au cours de ce bootcamp, j'ai eu
+                                l'opportunité de me familiariser avec un ensemble d’outils et de technologies essentiels
+                                pour la gestion, le déploiement et la surveillance d’infrastructures modernes.</p>
+                            <p>Cloud et Infrastructure as Code (IaC) : J'ai appris à concevoir et gérer des
+                                infrastructures
+                                en utilisant AWS pour le déploiement cloud et Terraform pour l'Infrastructure as Code,
+                                facilitant ainsi le déploiement et la gestion automatisée des ressources cloud. La
+                                formation
+                                m'a également initié à Vagrant pour la gestion d’environnements de développement
+                                reproductibles.</p>
+
+                            <p>Conteneurisation et Orchestration : J'ai travaillé avec Docker pour la conteneurisation
+                                des
+                                applications, simplifiant ainsi les déploiements et améliorant la portabilité des
+                                services.
+                                Pour la gestion de clusters de conteneurs, Kubernetes a été utilisé pour orchestrer les
+                                déploiements en production, garantissant la scalabilité et la résilience des
+                                applications.
+                            </p>
+
+                            <p>Automatisation et CI/CD : La formation a mis un accent particulier sur l'automatisation
+                                des
+                                workflows et la gestion des pipelines CI/CD. J'ai maîtrisé Jenkins pour créer des
+                                pipelines
+                                de déploiement automatisé, Ansible pour la gestion de configuration et l'automatisation
+                                des
+                                tâches système, ainsi que Bash et Python pour les scripts d'automatisation et la gestion
+                                des
+                                systèmes.</p>
+
+                            <p> Surveillance et Logs : Pour assurer la surveillance des systèmes et le suivi des
+                                performances, j'ai appris à utiliser des outils comme Grafana et Prometheus, permettant
+                                une
+                                visibilité complète sur l’infrastructure et une détection proactive des anomalies. Le
+                                stack
+                                ELK (Elasticsearch, Logstash, Kibana) a également été exploré pour la centralisation et
+                                l'analyse des logs, facilitant ainsi le diagnostic des problèmes et l’optimisation des
+                                performances.</p>
+
+                            <p>Serveurs et Réseaux : La configuration de serveurs avec Nginx a renforcé mes compétences
+                                en
+                                gestion de serveurs et en optimisation des performances web, tandis que la formation m'a
+                                permis d'acquérir une bonne maîtrise des bases de données NoSQL pour le stockage et la
+                                gestion de données non structurées.
+                            </p>
+                            <p>
+                                Grâce à ce bootcamp, j'ai acquis les compétences nécessaires pour construire, déployer
+                                et
+                                gérer des infrastructures modernes et résilientes, en intégrant des pratiques DevOps
+                                avancées pour l'automatisation, la sécurité et la performance. Cette formation constitue
+                                une
+                                base solide pour évoluer dans des environnements techniques complexes et prendre en
+                                charge
+                                des projets de transformation numérique.
+
+                            </p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-icon">2</div>
+                        <div class="timeline-content">
+                            <h3>EFREI Paris</h3>
+                            <span>(2021 - 2023)</span>
+                            <p>Cycle ingénieur informatique mention Big Data et Machine Learning.</p>
+                            <p>Au cours de ce cycle d’ingénierie, j'ai développé une expertise approfondie en Big Data
+                                et
+                                Machine Learning, me permettant d’aborder le traitement et l'analyse de données
+                                massives,
+                                ainsi que la création de modèles prédictifs pour résoudre des problématiques complexes.
+                                Cette formation m'a permis de maîtriser un large éventail de technologies et de
+                                méthodologies au cœur des systèmes de données modernes.</p>
+                            <p>Big Data et Traitement de Données Massives : J'ai appris à manipuler et traiter de grands
+                                volumes de données en utilisant des technologies de traitement distribué telles que
+                                Apache
+                                Hadoop et Apache Spark. Ces outils permettent de traiter efficacement des ensembles de
+                                données massifs en parallèle, rendant possible l’analyse de données à grande échelle
+                                pour
+                                des applications variées.</p>
+                            <p>Data Engineering et Pipelines de Données : La formation m'a permis de concevoir et
+                                d’optimiser des pipelines de données robustes, utilisant des technologies comme Kafka
+                                pour
+                                le streaming de données en temps réel, et Apache NiFi pour l’automatisation des flux de
+                                données. J'ai également acquis une expertise dans le stockage de données avec des bases
+                                de
+                                données NoSQL telles que MongoDB et Cassandra, adaptées aux données non structurées et à
+                                la
+                                scalabilité.</p>
+                            <p>Infrastructure Cloud pour la Data : Pour la gestion des infrastructures de données, j'ai
+                                travaillé avec des services AWS (comme AWS S3 pour le stockage de données et AWS EMR
+                                pour le
+                                traitement de Big Data), ce qui m'a permis de développer des solutions évolutives et
+                                rentables pour les charges de travail intensives en données. J’ai également appris à
+                                intégrer ces technologies dans des environnements hybrides et multi-cloud.</p>
+                            <p>Machine Learning et Modélisation Prédictive : J'ai acquis une expertise dans le
+                                développement
+                                de modèles de machine learning en utilisant Python et des bibliothèques comme
+                                scikit-learn,
+                                TensorFlow, et Keras. Ces outils m’ont permis de créer des modèles prédictifs,
+                                d’implémenter
+                                des algorithmes supervisés et non supervisés, et de travailler sur des problématiques
+                                telles
+                                que la classification, la régression et le clustering.</p>
+                            <p>Analyse et Visualisation des Données : J'ai également développé des compétences en
+                                visualisation de données pour interpréter et communiquer les résultats des analyses.
+                                J’ai
+                                utilisé Tableau et Power BI pour créer des tableaux de bord interactifs, ainsi que
+                                Matplotlib et Seaborn pour des visualisations en Python, ce qui me permet de transformer
+                                les
+                                données en insights exploitables pour la prise de décision.</p>
+                            <p>Optimisation et Gestion de Modèles : En plus de l'entraînement des modèles, j’ai appris à
+                                déployer et optimiser des modèles en production, en intégrant des pratiques de MLOps.
+                                L’utilisation de Docker et Kubernetes pour le déploiement de modèles dans des
+                                environnements
+                                conteneurisés m’a permis de maîtriser la scalabilité et la résilience des solutions de
+                                machine learning.</p>
+                            <p>Grâce à cette formation, j'ai acquis une expertise complète pour concevoir, implémenter
+                                et
+                                déployer des solutions de Big Data et Machine Learning. Mes compétences me permettent de
+                                gérer l’ensemble du cycle de vie des données, de l'ingestion à l'analyse et à la mise en
+                                production des modèles, en intégrant les pratiques d'ingénierie des données et de
+                                science
+                                des données pour répondre aux besoins des entreprises modernes.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-icon">3</div>
+                        <div class="timeline-content">
+                            <h3>Université de Douala</h3>
+                            <span>(2016 - 2022)</span>
+                            <p>Cycle licence, master, et doctorat mention Mathématiques Appliquées aux Sciences de
+                                l'Ingénieur.</p>
+                            <p>Ce cycle universitaire approfondi en Mathématiques Appliquées aux Sciences de l'Ingénieur
+                                m'a
+                                permis de développer une expertise en modélisation mathématique, analyse numérique, et
+                                résolution de problèmes complexes dans des contextes industriels et scientifiques. Ce
+                                parcours, allant de la licence au doctorat, m'a donné les outils nécessaires pour
+                                aborder
+                                des problématiques variées, en appliquant des techniques mathématiques avancées et des
+                                méthodes d'optimisation.</p>
+                            <p>Modélisation Mathématique et Équations Différentielles : J'ai acquis des compétences
+                                solides
+                                en modélisation mathématique pour représenter et résoudre des systèmes physiques
+                                complexes.
+                                L'étude et la résolution d'équations différentielles ordinaires (EDO) et partielles
+                                (EDP)
+                                m'ont permis de modéliser des phénomènes dynamiques dans des domaines tels que la
+                                mécanique
+                                des fluides, la thermodynamique, et les systèmes de contrôle.</p>
+                            <p>Analyse Numérique et Algorithmes : J'ai étudié des méthodes d’analyse numérique pour
+                                l'approximation des solutions, en utilisant des algorithmes avancés pour des calculs de
+                                haute précision. Des outils comme MATLAB et Python (avec des bibliothèques comme NumPy
+                                et
+                                SciPy) ont été utilisés pour implémenter ces méthodes et analyser les résultats de
+                                simulations numériques.</p>
+                            <p>Optimisation et Recherche Opérationnelle : Mon parcours m'a permis de développer des
+                                compétences en optimisation, en travaillant sur des méthodes telles que la programmation
+                                linéaire, non linéaire et les algorithmes de recherche opérationnelle. Ces compétences
+                                sont
+                                essentielles pour résoudre des problématiques d’optimisation dans des contextes
+                                d'ingénierie
+                                et de gestion des ressources, en minimisant ou maximisant des fonctions d’objectif
+                                complexes.</p>
+                            <p>Probabilités et Statistiques Avancées : J'ai également étudié les probabilités et
+                                statistiques avancées, qui jouent un rôle crucial dans l’analyse de données et la prise
+                                de
+                                décision sous incertitude. L’application de ces concepts m'a permis de développer une
+                                expertise en modélisation stochastique, utilisée pour prévoir et analyser des phénomènes
+                                aléatoires dans des systèmes industriels.</p>
+                            <p>Simulation et Analyse des Systèmes Complexes : La maîtrise des méthodes de simulation m'a
+                                permis d’analyser le comportement de systèmes complexes et de valider les modèles
+                                théoriques. Les simulations, réalisées avec des outils comme MATLAB et Simulink,
+                                permettent
+                                d’explorer et d’optimiser des scénarios variés, notamment dans les domaines de
+                                l’ingénierie
+                                des systèmes et de la gestion de projet.</p>
+                            <p>Thèse de Doctorat et Recherche : Dans le cadre de mon doctorat, j'ai mené des recherches
+                                poussées dans un domaine spécifique des mathématiques appliquées aux sciences de
+                                l’ingénieur, en développant de nouveaux modèles et méthodes pour résoudre des problèmes
+                                concrets. Cette expérience de recherche m’a permis de renforcer mes compétences en
+                                analyse
+                                critique, en gestion de projet, et en communication scientifique, en publiant et
+                                présentant
+                                mes travaux dans des conférences et revues académiques.</p>
+                            <p>Grâce à cette formation de haut niveau, j'ai acquis une compréhension approfondie des
+                                méthodes mathématiques et de leurs applications pratiques dans les sciences de
+                                l’ingénieur.
+                                Ce parcours me permet aujourd'hui d'aborder des défis techniques complexes avec une
+                                approche
+                                rigoureuse et analytique, en intégrant des concepts de modélisation, d'optimisation et
+                                de
+                                simulation pour concevoir des solutions innovantes et efficaces.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 Mon Portfolio</p>
+    </footer>
+</body>
+
+</html>

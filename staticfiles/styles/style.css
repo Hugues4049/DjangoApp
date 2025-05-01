@@ -138,24 +138,43 @@ footer a:hover {
     color: #ffffff;
 }*/
 /* Style pour l'en-tête */
+
 .header-section {
-    background-image: url("{% static 'images/backgroundportfolio.jpg' %}");
-    /* Remplacez par le chemin de votre image de fond */
+    background-image: url("/static/images/backgroundportfolio.jpg");
     background-size: cover;
     background-position: center;
     color: white;
     text-align: center;
     padding: 50px 0;
+    position: relative;
+}
+
+.header-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Couleur noire avec transparence */
+    z-index: 1;
+}
+
+/* Assurez-vous que le texte et le contenu soient au-dessus de l'overlay */
+.header-section .container {
+    position: relative;
+    z-index: 2;
 }
 
 /* Style pour la photo de profil */
 .profile-pic {
     width: 150px;
     /* Ajustez la taille selon vos préférences */
-    height: 150px;
+    height: 200px;
     border-radius: 50%;
     /* Pour une forme circulaire */
-    border: 3px solid white;
+    border: 1px white;
     /* Un contour blanc pour bien ressortir */
     margin-bottom: 20px;
     /* Espace entre la photo et le nom */

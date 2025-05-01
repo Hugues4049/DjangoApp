@@ -1,0 +1,62 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>À propos de moi</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+
+<body>
+    <!-- Section d'en-tête stylisée -->
+    <header class="header-section">
+        <div class="container">
+            <h1>À propos de moi</h1>
+            <nav>
+                <ul>
+                    <li><a href="{% url 'index' %}">Accueil</a></li>
+                    <li><a href="{% url 'profil' %}">À propos de moi</a></li>
+                    <li><a href="{% url 'parcours_academique' %}">Parcours Académique</a></li>
+                    <li><a href="{% url 'experiences' %}">Expériences</a></li>
+                    <li><a href="{% url 'certifications' %}">Certifications</a></li>
+                    <li><a href="{% url 'projets' %}">Projets</a></li>
+                    <li><a href="{% url 'competences' %}">Compétences</a></li>
+                    <li><a href="{% url 'contact' %}">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- Section stylisée "Profil" -->
+        <section id="profil" class="section">
+            <div class="container">
+                <h2>Qui suis-je??</h2>
+                <p>Ingénieur DevOps et Data, je suis diplômé de l'Efrei, l'école du numérique, où j'ai obtenu en 2023 un
+                    diplôme d'ingénieur en informatique avec une spécialisation en Big Data et Machine Learning 🎓. Mon
+                    parcours m'a permis d'acquérir une solide expertise en infrastructure cloud, CI/CD et
+                    automatisation,
+                    avec une spécialisation dans les environnements tels que AWS et Terraform.</p>
+                <p>J'ai également exploré des outils et techniques avancés de Data Engineering, notamment en utilisant
+                    des technologies comme Spark, Hadoop et Kafka, essentielles pour le traitement de données massives.
+                </p>
+                <p>Passionné par les mathématiques appliquées et la science des données, j’ai complété ce bagage
+                    scientifique en menant des recherches et des projets dans le domaine de l'analyse de données et de
+                    la modélisation mathématique.</p>
+                <p>Parallèlement à mes études, j'ai débuté en 2014 une carrière en enseignement, offrant des cours
+                    particuliers avant de devenir enseignant vacataire dans des écoles d’ingénieurs.</p>
+                <p>Cette expérience académique et professionnelle me permet aujourd'hui d’allier la rigueur scientifique
+                    des mathématiques appliquées, l’analyse de données et l'efficacité des pratiques DevOps.</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Pied de page stylisé -->
+    <footer>
+        <p>© 2025 Mon Portfolio</p>
+    </footer>
+</body>
+
+</html>

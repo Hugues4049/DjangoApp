@@ -1,0 +1,87 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Certifications</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Certifications</h1>
+        <nav>
+            <nav>
+
+                <ul>
+                    <li><a href="{% url 'index' %}">Accueil</a></li>
+                    <li><a href="{% url 'profil' %}">À propos de moi</a></li>
+                    <li><a href="{% url 'parcours_academique' %}">Parcours Académique</a></li>
+                    <li><a href="{% url 'experiences' %}">Expériences</a></li>
+                    <li><a href="{% url 'certifications' %}">Certifications</a></li>
+                    <li><a href="{% url 'projets' %}">Projets</a></li>
+                    <li><a href="{% url 'competences' %}">Compétences</a></li>
+                    <li><a href="{% url 'contact' %}">Contact</a></li>
+                </ul>
+            </nav>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Mes certifications</h2>
+            <p>Découvrez mes différentes certifications obtenues au cours de mon parcours.</p>
+        </section>
+        <!-- Section Certifications -->
+        <section id="certifications" class="section">
+            <div class="container">
+                <h2>Certifications</h2>
+                <div class="certifications-container">
+                    <!-- Certification AWS -->
+                    <div class="certification">
+                        <img src="{% static 'images/image_aws.png' %}"
+                            alt="AWS Certified Solutions Architect - Associate">
+                        <ul>
+                            <li><strong>Certification :</strong> AWS Certified Solutions Architect - Associate</li>
+                            <li><strong>Date d'obtention :</strong> Avril 2024</li>
+                            <li><strong>Description :</strong> Conception et déploiement d'architectures évolutives et
+                                sécurisées sur AWS.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Certification Terraform -->
+                    <div class="certification">
+                        <img src="{% static 'images/image_harchicorp.png' %}"
+                            alt="HashiCorp Certified: Terraform Associate">
+                        <ul>
+                            <li><strong>Certification :</strong> HashiCorp Certified: Terraform Associate</li>
+                            <li><strong>Date d'obtention :</strong> Mars 2024</li>
+                            <li><strong>Description :</strong> Automatisation de l'infrastructure via Infrastructure as
+                                Code
+                                avec Terraform.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Certification Azure -->
+                    <div class="certification">
+                        <img src="{% static 'images/DP_300.png' %}" alt="Microsoft Azure DP300">
+                        <ul>
+                            <li><strong>Certification :</strong> Microsoft Azure DP203</li>
+                            <li><strong>Date d'obtention :</strong> Mai 2023</li>
+                            <li><strong>Description :</strong> Analyse de données et intégration d'applications cloud
+                                avec
+                                Microsoft Azure.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 Mon Portfolio</p>
+    </footer>
+</body>
+
+</html>

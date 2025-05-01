@@ -1,0 +1,94 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Compétences</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Compétences</h1>
+        <nav>
+            <nav>
+
+                <ul>
+                    <li><a href="{% url 'index' %}">Accueil</a></li>
+                    <li><a href="{% url 'profil' %}">À propos de moi</a></li>
+                    <li><a href="{% url 'parcours_academique' %}">Parcours Académique</a></li>
+                    <li><a href="{% url 'experiences' %}">Expériences</a></li>
+                    <li><a href="{% url 'certifications' %}">Certifications</a></li>
+                    <li><a href="{% url 'projets' %}">Projets</a></li>
+                    <li><a href="{% url 'competences' %}">Compétences</a></li>
+                    <li><a href="{% url 'contact' %}">Contact</a></li>
+                </ul>
+            </nav>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Mes compétences</h2>
+            <p>Voici la liste de mes compétences techniques et professionnelles.</p>
+        </section>
+
+        <!-- Section Compétences -->
+        <section id="competences" class="section">
+            <div class="container">
+                <h2>Compétences</h2>
+                <div class="competences-grid">
+                    <div class="competence-card">
+                        <h3>Cloud Computing</h3>
+                        <p>Au-delà de AWS, je suis curieux autour des autres cloud provider : AZURE, Oracle OCI, Google
+                            GCP
+                            et OVH pour le cloud web. J’ai aussi travaillé sur un sujet de migration Cloud.</p>
+                    </div>
+                    <div class="competence-card">
+                        <h3>Infrastructure as Code</h3>
+                        <p>Je maîtrise les technologies d’IaC depuis que j’ai commencé ma carrière. Terraform(dont je
+                            suis
+                            certifié) pour
+                            commencer, puis Helm et Ansible après. J’ai récemment compris le fonctionnement de Vault
+                            .</p>
+                    </div>
+                    <div class="competence-card">
+                        <h3>CI/CD</h3>
+                        <p>J’ai développé diverses pipelines CI/CD avec GitHub Actions et AWS codepipeline pendant mon
+                            stage,
+                            GitLab CI et Jenkins chez DataIdraw et NEERO. Je suis un fervent partisan de
+                            l’automatisation et
+                            c’est ce
+                            que j’utilise pour mon blog.</p>
+                    </div>
+                    <div class="competence-card">
+                        <h3>Programmation</h3>
+                        <p>
+
+                            J'ai développé une solide expertise en Python, Bash, et Scala, qui me permettent de créer
+                            des
+                            scripts et d'automatiser des tâches complexes dans divers environnements.</p>
+                    </div>
+                    <div class="competence-card">
+                        <h3>Big Data & Data Engineering</h3>
+                        <p>Mon expertise en Hadoop, Spark, Kafka, et HDFS me permet de traiter et d'analyser des données
+                            à
+                            grande échelle de manière efficace. </p>
+                    </div>
+                    <div class="competence-card">
+                        <h3>Bases de données</h3>
+                        <p>J'ai acquis une solide expérience dans la gestion de bases de données avec MongoDB, MySQL, et
+                            PostgreSQL.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 Mon Portfolio</p>
+    </footer>
+</body>
+
+</html>

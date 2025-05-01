@@ -1,0 +1,122 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Projets</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Mes Projets</h1>
+        <nav>
+            <nav>
+
+                <ul>
+                    <li><a href="{% url 'index' %}">Accueil</a></li>
+                    <li><a href="{% url 'profil' %}">À propos de moi</a></li>
+                    <li><a href="{% url 'parcours_academique' %}">Parcours Académique</a></li>
+                    <li><a href="{% url 'experiences' %}">Expériences</a></li>
+                    <li><a href="{% url 'certifications' %}">Certifications</a></li>
+                    <li><a href="{% url 'projets' %}">Projets</a></li>
+                    <li><a href="{% url 'competences' %}">Compétences</a></li>
+                    <li><a href="{% url 'contact' %}">Contact</a></li>
+                </ul>
+            </nav>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Projets réalisés</h2>
+            <p>Présentation de mes projets personnels et professionnels.</p>
+        </section>
+        <!-- Section Projets -->
+        <section id="projets" class="section">
+            <div class="container">
+                <h2>Mes Projets</h2>
+                <div class="projets-grid">
+                    <div class="projet-card">
+                        <h3><a href="https://github.com/Hugues4049/elk-filebeat-djangoApp.git" target="_blank">ELK Stack
+                                monitoring</a></h3>
+                        <p>Monitoring et supervision d'une application déployée sur AWS en utilisant la stack ELK.</p>
+                    </div>
+                    <div class="projet-card">
+                        <h3><a href="https://github.com/Hugues4049/DjangoApp" target="_blank">Application Django</a>
+                        </h3>
+                        <p>Déploiement d'une application Django sur AWS en utilisant ECS (Elastic Container Service) et
+                            ECR
+                            (Elastic Container Registry) pour une mise en production scalable et optimisée.</p>
+                    </div>
+                    <div class="projet-card">
+                        <h3><a href="https://github.com/Hugues4049/Terraform-project1" target="_blank">Terraform
+                                Project</a>
+                        </h3>
+                        <p>Projet d'infrastructure as code utilisant Terraform pour construire, déployer et automatiser
+                            le
+                            déploiement d'un site web WordPress.</p>
+                    </div>
+                    <div class="projet-card">
+                        <h3><a href="https://github.com/Hugues4049/Jan24_poet_storm_web1"
+                                target="_blank">Jan24_poet_storm_web1</a></h3>
+                        <p>Un projet de création d’une application web basée sur la conception modulaire et les
+                            microservices.</p>
+                    </div>
+                    <div class="projet-card">
+                        <h3><a href="https://github.com/Hugues4049/Jenkins-CI-CD-Pipeline" target="_blank">Jenkins CI/CD
+                                Pipeline</a></h3>
+                        <p>Un pipeline CI/CD complet utilisant Jenkins pour automatiser les builds, les tests, et le
+                            déploiement dans un environnement de production.</p>
+                    </div>
+                    <div class="projet-card">
+                        <h3><a href="https://github.com/Hugues4049/Home-Credit-Risk-Classification" target="_blank">Home
+                                Credit Risk Classification</a></h3>
+                        <p>Projet de classification de risques de crédit en utilisant des techniques de machine learning
+                            pour évaluer la solvabilité des clients.</p>
+                    </div>
+                    <div class="projet-card">
+                        <h3><a href="https://github.com/Hugues4049/CI_WITH_GITHUB" target="_blank">CI avec GitHub
+                                Actions</a></h3>
+                        <p>Projet démontrant l'intégration continue avec GitHub Actions pour automatiser les tests et le
+                            déploiement de l'application.</p>
+                    </div>
+                    <div class="projet-card">
+                        <h3><a href="https://github.com/Hugues4049/Application-of-Big-Data" target="_blank">Application
+                                of
+                                Big Data</a></h3>
+                        <p>Introduction au Big Data et son application à grande échelle, incluant des outils pour la
+                            gestion
+                            et l'analyse des données massives.</p>
+                    </div>
+                    <div class="projet-card">
+                        <h3><a href="https://github.com/Hugues4049/My_test_app" target="_blank">My Test App</a></h3>
+                        <p>Application de test développée pour expérimenter et tester divers concepts de développement
+                            d'applications.</p>
+                    </div>
+                    <div class="projet-card">
+                        <h3><a href="https://github.com/Hugues4049/Data-Lakes-Data-Integration" target="_blank">Data
+                                Lakes
+                                Data Integration</a></h3>
+                        <p>Projet d'intégration de données dans un Data Lake, avec extraction de données provenant de
+                            multiples sources pour une centralisation efficace.</p>
+                    </div>
+                    <div class="projet-card">
+                        <h3><a href="https://github.com/Hugues4049/Mon-projet-de-visualisation" target="_blank">Mon
+                                Projet
+                                de Visualisation</a></h3>
+                        <p>Application web pour visualiser les données YouTube d'un utilisateur en utilisant Streamlit,
+                            offrant des analyses des musiques les plus écoutées et des artistes les plus suivis.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 Mon Portfolio</p>
+    </footer>
+</body>
+
+</html>

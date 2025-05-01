@@ -4,3 +4,444 @@ Watching for file changes with StatReloader
 "GET / HTTP/1.1" 200 33802
 "GET / HTTP/1.1" 200 33802
 "GET / HTTP/1.1" 200 33802
+"GET / HTTP/1.1" 200 33802
+Watching for file changes with StatReloader
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/roland/Bureau/SERIES_PROJETS/DJANGO/my_django_app/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/roland/Bureau/SERIES_PROJETS/DJANGO/my_django_app/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/roland/Bureau/SERIES_PROJETS/DJANGO/my_django_app/mapage/views.py", line 4, in home
+    return render(request, 'home.html')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/roland/Bureau/SERIES_PROJETS/DJANGO/my_django_app/venv/lib/python3.12/site-packages/django/shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/roland/Bureau/SERIES_PROJETS/DJANGO/my_django_app/venv/lib/python3.12/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/roland/Bureau/SERIES_PROJETS/DJANGO/my_django_app/venv/lib/python3.12/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: home.html
+"GET / HTTP/1.1" 500 84967
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 2726
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/roland/Bureau/SERIES_PROJETS/DJANGO/my_django_app/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/roland/Bureau/SERIES_PROJETS/DJANGO/my_django_app/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/roland/Bureau/SERIES_PROJETS/DJANGO/my_django_app/mapage/views.py", line 4, in home
+    return render(request, 'home.html')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/roland/Bureau/SERIES_PROJETS/DJANGO/my_django_app/venv/lib/python3.12/site-packages/django/shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/roland/Bureau/SERIES_PROJETS/DJANGO/my_django_app/venv/lib/python3.12/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/roland/Bureau/SERIES_PROJETS/DJANGO/my_django_app/venv/lib/python3.12/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: home.html
+"GET / HTTP/1.1" 500 84973
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 121
+/home/roland/Bureau/SERIES_PROJETS/DJANGO/my_django_app/mapage/views.py changed, reloading.
+Watching for file changes with StatReloader
+/home/roland/Bureau/SERIES_PROJETS/DJANGO/my_django_app/mapage/views.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 33802
+"GET /static/styles/style.css HTTP/1.1" 200 6569
+"GET /static/icons/mail.png HTTP/1.1" 200 1686
+"GET /static/images/image_aws.png HTTP/1.1" 200 56356
+"GET /static/images/image_harchicorp.png HTTP/1.1" 200 20871
+"GET /static/images/DP_300.png HTTP/1.1" 200 35441
+"GET /static/images/IMG_2367.jpg HTTP/1.1" 200 1049676
+"GET /static/icons/github.png HTTP/1.1" 200 2692
+"GET /static/icons/X.png HTTP/1.1" 200 3101
+"GET /static/icons/link.png HTTP/1.1" 200 1496
+"GET /static/icons/insta.jpeg HTTP/1.1" 200 11321
+"GET /static/icons/whatsap.png HTTP/1.1" 200 3600
+"GET /static/icons/tel.png HTTP/1.1" 200 2875
+"GET /static/images/backgroundportfolio.jpg HTTP/1.1" 200 444946
+"GET / HTTP/1.1" 200 33802
+"GET / HTTP/1.1" 200 33802
+/home/roland/Bureau/SERIES_PROJETS/DJANGO/my_django_app/mapage/urls.py changed, reloading.
+Watching for file changes with StatReloader
+/home/roland/Bureau/SERIES_PROJETS/DJANGO/my_django_app/mapage/views.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Not Found: /
+"GET / HTTP/1.1" 404 4015
+/home/roland/Bureau/SERIES_PROJETS/DJANGO/my_django_app/mapage/urls.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Not Found: /
+"GET / HTTP/1.1" 404 4015
+/home/roland/Bureau/SERIES_PROJETS/DJANGO/my_django_app/mapage/urls.py changed, reloading.
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 33832
+Not Found: /profil.html
+"GET /profil.html HTTP/1.1" 404 4552
+Not Found: /profil.html
+"GET /profil.html HTTP/1.1" 404 4552
+"GET / HTTP/1.1" 200 33808
+"GET /profil/ HTTP/1.1" 200 569
+Not Found: /profil/style.css
+"GET /profil/style.css HTTP/1.1" 404 4567
+Not Found: /profil/index.html
+"GET /profil/index.html HTTP/1.1" 404 4570
+"GET /profil/ HTTP/1.1" 200 569
+Not Found: /profil/style.css
+"GET /profil/style.css HTTP/1.1" 404 4567
+Not Found: /profil/index.html
+"GET /profil/index.html HTTP/1.1" 404 4570
+"GET /parcours-academique/ HTTP/1.1" 200 557
+Not Found: /parcours-academique/style.css
+"GET /parcours-academique/style.css HTTP/1.1" 404 4606
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 33808
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 4552
+"GET /profil/ HTTP/1.1" 200 569
+Not Found: /profil/style.css
+"GET /profil/style.css HTTP/1.1" 404 4567
+"GET /parcours-academique/ HTTP/1.1" 200 557
+Not Found: /parcours-academique/style.css
+"GET /parcours-academique/style.css HTTP/1.1" 404 4606
+"GET /experiences/ HTTP/1.1" 200 575
+Not Found: /experiences/style.css
+"GET /experiences/style.css HTTP/1.1" 404 4582
+Not Found: /experiences/index.html
+"GET /experiences/index.html HTTP/1.1" 404 4585
+/home/roland/Bureau/SERIES_PROJETS/DJANGO/my_django_app/mapage/urls.py changed, reloading.
+Watching for file changes with StatReloader
+/home/roland/Bureau/SERIES_PROJETS/DJANGO/my_django_app/mapage/views.py changed, reloading.
+Watching for file changes with StatReloader
+Not Found: /
+"GET / HTTP/1.1" 404 4015
+Not Found: /
+"GET / HTTP/1.1" 404 4015
+Not Found: /
+"GET / HTTP/1.1" 404 4015
+Not Found: /
+"GET / HTTP/1.1" 404 4015
+Not Found: /
+"GET / HTTP/1.1" 404 4015
+/home/roland/Bureau/SERIES_PROJETS/DJANGO/my_django_app/mapage/urls.py changed, reloading.
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 33808
+"GET /profil/ HTTP/1.1" 200 569
+Not Found: /profil/style.css
+"GET /profil/style.css HTTP/1.1" 404 4328
+Not Found: /profil/index.html
+"GET /profil/index.html HTTP/1.1" 404 4331
+"GET /experiences/ HTTP/1.1" 200 575
+Not Found: /experiences/style.css
+"GET /experiences/style.css HTTP/1.1" 404 4343
+Not Found: /experiences/index.html
+"GET /experiences/index.html HTTP/1.1" 404 4346
+Not Found: /experiences/index.html
+"GET /experiences/index.html HTTP/1.1" 404 4346
+"GET / HTTP/1.1" 200 33809
+"GET /profil/ HTTP/1.1" 200 569
+Not Found: /profil/style.css
+"GET /profil/style.css HTTP/1.1" 404 4328
+Not Found: /profil/index.html
+"GET /profil/index.html HTTP/1.1" 404 4331
+Not Found: /profil/index.html
+"GET /profil/index.html HTTP/1.1" 404 4331
+Not Found: /profil/index.html
+"GET /profil/index.html HTTP/1.1" 404 4331
+/home/roland/Bureau/SERIES_PROJETS/DJANGO/my_django_app/mapage/urls.py changed, reloading.
+Watching for file changes with StatReloader
+/home/roland/Bureau/SERIES_PROJETS/DJANGO/my_django_app/mapage/views.py changed, reloading.
+Watching for file changes with StatReloader
+Not Found: /profil/index.html
+"GET /profil/index.html HTTP/1.1" 404 4331
+/home/roland/Bureau/SERIES_PROJETS/DJANGO/my_django_app/mapage/views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 33809
+"GET /profil/ HTTP/1.1" 200 569
+"GET /static/style.css HTTP/1.1" 404 1841
+"GET / HTTP/1.1" 200 33809
+"GET /profil/ HTTP/1.1" 200 569
+"GET /static/style.css HTTP/1.1" 404 1841
+"GET / HTTP/1.1" 200 33809
+"GET /parcours-academique/ HTTP/1.1" 200 557
+Not Found: /parcours-academique/style.css
+"GET /parcours-academique/style.css HTTP/1.1" 404 4367
+Not Found: /parcours-academique/index.html
+"GET /parcours-academique/index.html HTTP/1.1" 404 4370
+Not Found: /parcours-academique/index.html
+"GET /parcours-academique/index.html HTTP/1.1" 404 4370
+Not Found: /parcours-academique/index.html
+"GET /parcours-academique/index.html HTTP/1.1" 404 4370
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 33809
+"GET /profil/ HTTP/1.1" 200 569
+"GET /static/style.css HTTP/1.1" 404 1841
+"GET / HTTP/1.1" 200 33809
+"GET /parcours-academique/ HTTP/1.1" 200 549
+Not Found: /parcours-academique/style.css
+"GET /parcours-academique/style.css HTTP/1.1" 404 4367
+"GET / HTTP/1.1" 200 33809
+"GET /experiences/ HTTP/1.1" 200 567
+Not Found: /experiences/style.css
+"GET /experiences/style.css HTTP/1.1" 404 4343
+"GET / HTTP/1.1" 200 33809
+"GET /certifications/ HTTP/1.1" 200 567
+Not Found: /certifications/style.css
+"GET /certifications/style.css HTTP/1.1" 404 4352
+"GET / HTTP/1.1" 200 33809
+"GET /projets/ HTTP/1.1" 200 538
+Not Found: /projets/style.css
+"GET /projets/style.css HTTP/1.1" 404 4331
+"GET / HTTP/1.1" 200 33809
+"GET /competences/ HTTP/1.1" 200 550
+Not Found: /competences/style.css
+"GET /competences/style.css HTTP/1.1" 404 4343
+"GET / HTTP/1.1" 200 33809
+Internal Server Error: /contact/
+Traceback (most recent call last):
+  File "/home/roland/Bureau/SERIES_PROJETS/DJANGO/my_django_app/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/roland/Bureau/SERIES_PROJETS/DJANGO/my_django_app/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/roland/Bureau/SERIES_PROJETS/DJANGO/my_django_app/mapage/views.py", line 25, in contact
+    return render(request, 'contact.html')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/roland/Bureau/SERIES_PROJETS/DJANGO/my_django_app/venv/lib/python3.12/site-packages/django/shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/roland/Bureau/SERIES_PROJETS/DJANGO/my_django_app/venv/lib/python3.12/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/roland/Bureau/SERIES_PROJETS/DJANGO/my_django_app/venv/lib/python3.12/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: contact.html
+"GET /contact/ HTTP/1.1" 500 85139
+"GET /profil/ HTTP/1.1" 200 3360
+"GET /static/style.css HTTP/1.1" 404 1841
+"GET / HTTP/1.1" 200 33809
+"GET /profil/ HTTP/1.1" 200 3360
+"GET /static/style.css HTTP/1.1" 404 1841
+"GET / HTTP/1.1" 200 33809
+"GET /parcours-academique/ HTTP/1.1" 200 17371
+Not Found: /parcours-academique/style.css
+"GET /parcours-academique/style.css HTTP/1.1" 404 4367
+"GET / HTTP/1.1" 200 33809
+"GET /experiences/ HTTP/1.1" 200 5742
+Not Found: /experiences/style.css
+"GET /experiences/style.css HTTP/1.1" 404 4343
+"GET / HTTP/1.1" 200 33809
+"GET /certifications/ HTTP/1.1" 200 2957
+Not Found: /certifications/style.css
+"GET /certifications/style.css HTTP/1.1" 404 4352
+"GET / HTTP/1.1" 200 33809
+"GET /projets/ HTTP/1.1" 200 5337
+Not Found: /projets/style.css
+"GET /projets/style.css HTTP/1.1" 404 4331
+"GET / HTTP/1.1" 200 33809
+"GET /competences/ HTTP/1.1" 200 3307
+Not Found: /competences/style.css
+"GET /competences/style.css HTTP/1.1" 404 4343
+"GET / HTTP/1.1" 200 33809
+"GET /competences/ HTTP/1.1" 200 3307
+Not Found: /competences/style.css
+"GET /competences/style.css HTTP/1.1" 404 4343
+"GET / HTTP/1.1" 200 3143
+"GET /profil/ HTTP/1.1" 200 3360
+"GET /static/style.css HTTP/1.1" 404 1841
+"GET / HTTP/1.1" 200 3143
+"GET / HTTP/1.1" 200 3143
+"GET /profil/ HTTP/1.1" 200 3863
+"GET /static/style.css HTTP/1.1" 404 1841
+"GET / HTTP/1.1" 200 3143
+"GET /parcours-academique/ HTTP/1.1" 200 17951
+Not Found: /parcours-academique/style.css
+"GET /parcours-academique/style.css HTTP/1.1" 404 4367
+"GET /profil/ HTTP/1.1" 200 3863
+"GET /static/style.css HTTP/1.1" 404 1841
+"GET /parcours-academique/ HTTP/1.1" 200 17951
+Not Found: /parcours-academique/style.css
+"GET /parcours-academique/style.css HTTP/1.1" 404 4367
+"GET /experiences/ HTTP/1.1" 200 6322
+Not Found: /experiences/style.css
+"GET /experiences/style.css HTTP/1.1" 404 4343
+"GET /certifications/ HTTP/1.1" 200 3537
+Not Found: /certifications/style.css
+"GET /certifications/style.css HTTP/1.1" 404 4352
+"GET /projets/ HTTP/1.1" 200 5917
+Not Found: /projets/style.css
+"GET /projets/style.css HTTP/1.1" 404 4331
+"GET / HTTP/1.1" 200 3143
+"GET /profil/ HTTP/1.1" 200 2813
+"GET /static/style.css HTTP/1.1" 404 1841
+"GET /profil/ HTTP/1.1" 200 2823
+"GET /static/style.css HTTP/1.1" 404 1841
+"GET /profil/ HTTP/1.1" 200 2823
+"GET /static/style.css HTTP/1.1" 404 1841
+"GET / HTTP/1.1" 200 3143
+"GET / HTTP/1.1" 200 3143
+"GET /profil/ HTTP/1.1" 200 2823
+"GET /static/style.css HTTP/1.1" 404 1841
+"GET /profil/ HTTP/1.1" 200 2823
+"GET /static/style.css HTTP/1.1" 404 1841
+"GET / HTTP/1.1" 200 3143
+"GET /profil/ HTTP/1.1" 200 2823
+"GET /static/style.css HTTP/1.1" 404 1841
+"GET / HTTP/1.1" 200 3153
+"GET /profil/ HTTP/1.1" 200 2833
+"GET /static/style.css HTTP/1.1" 404 1841
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 3153
+"GET /profil/ HTTP/1.1" 200 2833
+"GET /static/style.css HTTP/1.1" 404 1841
+"GET / HTTP/1.1" 200 3153
+"GET /profil/ HTTP/1.1" 200 2850
+"GET /static/style.css HTTP/1.1" 404 1841
+"GET /parcours-academique/ HTTP/1.1" 200 17951
+Not Found: /parcours-academique/style.css
+"GET /parcours-academique/style.css HTTP/1.1" 404 4367
+"GET /parcours-academique/ HTTP/1.1" 200 17961
+Not Found: /parcours-academique/style.css
+"GET /parcours-academique/style.css HTTP/1.1" 404 4367
+"GET / HTTP/1.1" 200 3153
+"GET /experiences/ HTTP/1.1" 200 6332
+Not Found: /experiences/style.css
+"GET /experiences/style.css HTTP/1.1" 404 4343
+"GET /competences/ HTTP/1.1" 200 3897
+Not Found: /competences/style.css
+"GET /competences/style.css HTTP/1.1" 404 4343
+"GET /profil/ HTTP/1.1" 200 2850
+"GET /static/style.css HTTP/1.1" 404 1841
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 3153
+"GET /profil/ HTTP/1.1" 200 2850
+"GET /static/style.css HTTP/1.1" 404 1841
+Watching for file changes with StatReloader
+"GET /experiences/ HTTP/1.1" 200 6332
+Not Found: /experiences/style.css
+"GET /experiences/style.css HTTP/1.1" 404 4343
+"GET /experiences/ HTTP/1.1" 200 6332
+Not Found: /experiences/style.css
+"GET /experiences/style.css HTTP/1.1" 404 4343
+"GET / HTTP/1.1" 200 3153
+"GET /profil/ HTTP/1.1" 200 2850
+"GET /static/style.css HTTP/1.1" 404 1841
+"GET / HTTP/1.1" 200 3153
+"GET /parcours-academique/ HTTP/1.1" 200 17961
+Not Found: /parcours-academique/style.css
+"GET /parcours-academique/style.css HTTP/1.1" 404 4367
+"GET /certifications/ HTTP/1.1" 200 3547
+Not Found: /certifications/style.css
+"GET /certifications/style.css HTTP/1.1" 404 4352
+"GET /experiences/ HTTP/1.1" 200 6332
+Not Found: /experiences/style.css
+"GET /experiences/style.css HTTP/1.1" 404 4343
+"GET /experiences/ HTTP/1.1" 200 6323
+Not Found: /experiences/style.css
+"GET /experiences/style.css HTTP/1.1" 404 4343
+"GET / HTTP/1.1" 200 3153
+"GET / HTTP/1.1" 200 3869
+Not Found: /ton-image.jpg
+"GET /ton-image.jpg HTTP/1.1" 404 4319
+Not Found: /icons/docker.svg
+Not Found: /icons/python.svg
+Not Found: /icons/kubernetes.svg
+Not Found: /icons/aws.svg
+Not Found: /icons/spark.svg
+"GET /icons/python.svg HTTP/1.1" 404 4328
+"GET /icons/kubernetes.svg HTTP/1.1" 404 4340
+"GET /icons/docker.svg HTTP/1.1" 404 4328
+"GET /icons/aws.svg HTTP/1.1" 404 4319
+"GET /icons/spark.svg HTTP/1.1" 404 4325
+Not Found: /icons/terraform.svg
+"GET /icons/terraform.svg HTTP/1.1" 404 4337
+"GET / HTTP/1.1" 200 3873
+Not Found: /ton-image.jpg
+Not Found: /icons/docker.svg
+"GET /ton-image.jpg HTTP/1.1" 404 4319
+"GET /icons/docker.svg HTTP/1.1" 404 4328
+Not Found: /icons/kubernetes.svg
+"GET /icons/kubernetes.svg HTTP/1.1" 404 4340
+Not Found: /icons/python.svg
+Not Found: /icons/aws.svg
+Not Found: /icons/terraform.svg
+Not Found: /icons/spark.svg
+"GET /icons/aws.svg HTTP/1.1" 404 4319
+"GET /icons/terraform.svg HTTP/1.1" 404 4337
+"GET /icons/python.svg HTTP/1.1" 404 4328
+"GET /icons/spark.svg HTTP/1.1" 404 4325
+"GET / HTTP/1.1" 200 3875
+Not Found: /ton-image.jpg
+"GET /ton-image.jpg HTTP/1.1" 404 4319
+Not Found: /icons/docker.svg
+"GET /icons/docker.svg HTTP/1.1" 404 4328
+Not Found: /icons/kubernetes.svg
+Not Found: /icons/aws.svg
+Not Found: /icons/python.svg
+Not Found: /icons/terraform.svg
+Not Found: /icons/spark.svg
+"GET /icons/spark.svg HTTP/1.1" 404 4325
+"GET /icons/kubernetes.svg HTTP/1.1" 404 4340
+"GET /icons/python.svg HTTP/1.1" 404 4328
+"GET /icons/terraform.svg HTTP/1.1" 404 4337
+"GET /icons/aws.svg HTTP/1.1" 404 4319
+"GET / HTTP/1.1" 200 3511
+Not Found: /icons/docker.svg
+Not Found: /icons/python.svg
+Not Found: /icons/kubernetes.svg
+"GET /icons/docker.svg HTTP/1.1" 404 4328
+Not Found: /icons/aws.svg
+Not Found: /icons/terraform.svg
+"GET /icons/python.svg HTTP/1.1" 404 4328
+Not Found: /icons/spark.svg
+"GET /icons/spark.svg HTTP/1.1" 404 4325
+"GET /icons/kubernetes.svg HTTP/1.1" 404 4340
+"GET /icons/aws.svg HTTP/1.1" 404 4319
+"GET /icons/terraform.svg HTTP/1.1" 404 4337
+"GET / HTTP/1.1" 200 3127
+"GET / HTTP/1.1" 200 3056
+"GET / HTTP/1.1" 200 3056
+"GET / HTTP/1.1" 200 3053
+"GET / HTTP/1.1" 200 3053
+"GET / HTTP/1.1" 200 3053
+"GET / HTTP/1.1" 200 4074
+Not Found: /ton-image.jpg
+Not Found: /icons/python.svg
+Not Found: /icons/spark.svg
+Not Found: /icons/docker.svg
+Not Found: /icons/aws.svg
+"GET /ton-image.jpg HTTP/1.1" 404 4319
+Not Found: /icons/kubernetes.svg
+"GET /icons/spark.svg HTTP/1.1" 404 4325
+"GET /icons/python.svg HTTP/1.1" 404 4328
+"GET /icons/docker.svg HTTP/1.1" 404 4328
+"GET /icons/aws.svg HTTP/1.1" 404 4319
+"GET /icons/kubernetes.svg HTTP/1.1" 404 4340
+Not Found: /icons/terraform.svg
+"GET /icons/terraform.svg HTTP/1.1" 404 4337
+"GET / HTTP/1.1" 200 3154
+"GET /profil/ HTTP/1.1" 200 2850
+"GET /static/style.css HTTP/1.1" 404 1841
+"GET / HTTP/1.1" 200 3153
+"GET /projets/ HTTP/1.1" 200 5927
+Not Found: /projets/style.css
+"GET /projets/style.css HTTP/1.1" 404 4331
+"GET /projets/ HTTP/1.1" 200 6294
+Not Found: /projets/style.css
+"GET /projets/style.css HTTP/1.1" 404 4331
+"GET /projets/ HTTP/1.1" 200 6328
+Not Found: /projets/style.css
+"GET /projets/style.css HTTP/1.1" 404 4331
